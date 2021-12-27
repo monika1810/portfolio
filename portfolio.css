@@ -73,7 +73,14 @@
   {
     background-color:khaki;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 100px;
+    display: flex;
+  }
+.img_one
+  {
+     width: 200px;
+     height: 150px;
+     margin-top: 10px;
   }
 .more_about h2
   {
@@ -166,6 +173,12 @@
     box-shadow: 0 3px 10px grey;
     padding: 20px;
     margin: 10px;
+  }
+.project_link
+  {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 20px;
   }
 /* Contact section */
 .contact 
