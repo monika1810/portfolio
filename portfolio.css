@@ -1,0 +1,376 @@
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+/* Navbar */
+.nav 
+  {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 56px;
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+.nav h1
+  {
+    color: red;
+  }
+.nav a 
+  {
+    color: grey;
+  }
+.nav a:hover 
+  {
+    color: blueviolet;
+    border-bottom: 2px solid gray;
+  }
+.nav ul
+  {
+    display: flex;
+    gap: 35px;
+  }
+.nav ul li 
+  {
+    font-weight:900;
+    font-size: 20px;
+    list-style: none;
+  }
+/* Hero Section   */
+.hero 
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+  }
+.hero img 
+  {
+    height: 600px;
+    width: 600px;
+  }
+.bio 
+  {
+    width: 400px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px 2px grey;
+  }
+.bio p 
+  {
+    line-height: 20px;
+    padding: 5px 0;
+  }
+/* More about   */
+.more_about 
+  {
+    background-color:khaki;
+    padding: 20px;
+    margin-top: 20px;
+  }
+.more_about h2
+  {
+    text-align: center;
+  }
+.more_about p
+  {
+    line-height: 5px;
+    padding: 20px;
+    font-family: cursive;
+    font-weight: 300;
+    color: red;
+  }
+/* Skills section   */
+.skills 
+  {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+.skill_header 
+  {
+    margin-bottom: 16px;
+  }
+.skills_wrapper img 
+  {
+    padding: 20px;
+  }
+.icon 
+  {
+    width: 190px;
+    height: 180px;
+  }
+.icon_card 
+  {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px grey;
+    padding: 20px;
+    margin: 10px;
+  }
+/* Projects section */
+.projects 
+  {
+    background-color: red;
+    padding: 32px 0;
+    margin-top: 32px;
+  }
+.project_pic 
+  {
+    width: 65%;
+    height: 60%;
+  }
+.projects_container 
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.projects_title 
+  {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+.project_container 
+  {
+    text-align: center;
+    width: 350px;
+    padding: 16px;
+  }
+.project_container p 
+  {
+    padding: 7px;
+  }
+.project_title 
+  {
+    margin-bottom: 15px;
+    margin-top: 12px;
+    font-size: 900;
+  }
+.project_details 
+  {
+    margin-bottom: 30px;
+  }
+.project_card 
+  {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px grey;
+    padding: 20px;
+    margin: 10px;
+  }
+/* Contact section */
+.contact 
+  {
+    margin-top: 32px;
+  }
+.contact h2 
+  {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+.contact_form_container 
+  {
+    max-width: 652px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px grey;
+  }
+.contact_form_container label 
+  {
+    line-height: 44px;
+    font-size: 20px;
+    font-weight: 900;
+    color: red;
+  }
+.contact_form_container textarea 
+  {
+    min-height: 100px;
+    font-size: 14px;
+  }
+.contact_form_container .input_field 
+  {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 2px outset grey;
+    font-size: 14px;
+    outline: none;
+  }
+.input_field::placeholder 
+  {
+    padding: 8px;
+    color: grey;
+  }
+.submit_btn 
+  {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color:brown;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight:700;
+  }
+.submit_btn:hover 
+  {
+    background-color: brown;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+/* gif */
+.gif
+  {
+    margin-top: 30px;
+    width: 1300px;
+    height: 400px;
+    margin-left: 40px;
+    margin-right: 20px;
+    box-shadow: 0 3px 10px grey;
+  }
+/* Footer section */
+.footer 
+  {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 2rem 0 0;
+  }
+.footer_style
+  {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about_inf
+  {
+    width: 300px;
+  }
+.about_inf p
+  {
+    color: red;
+    margin-top: 15px;
+    font-weight: 600;
+  } 
+.about_inf p a:hover
+{
+  color: yellowgreen;
+}  
+.followMe
+  {
+    width: 300px;
+  } 
+.social_li
+  {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+  }
+.social_li li
+  {
+    color: red;
+    margin-top: 15px;
+  }
+.social_li li:hover
+  {
+    color: yellowgreen;
+    margin-top: 15px;
+  }
+.facebook
+  {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 8px;
+  }
+.twitter
+  {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 8px;
+  }
+.linkedin 
+  {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 8px;
+  }
+.instagram
+  {
+    font-size: 25px;
+    color:white;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 8px;
+  } 
+.about
+  { 
+    width: 300px;
+  }
+.header_about
+  {
+    font-family: cursive;
+    color: red;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+.links
+  {
+    width: 300px;
+  } 
+.social_list
+  {
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+.social_link
+  {
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: cursive;
+    text-decoration: none;
+  }
+.social_link:hover
+  {
+    color:yellowgreen;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: cursive;
+    text-decoration: none;
+  }    
+.copy_right
+  {
+    text-align:center;
+    margin-top: 30px;
+  }
+.copy
+  {
+    color: wheat;
+    font-weight: 600;
+    font-size: 20px;
+  }
+.copy a:hover
+{
+  color: yellowgreen;
+}  
