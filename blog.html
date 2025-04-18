@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Monika Singh | Product Manager, SEO Strategist & Web Designer</title>
+    <meta
+      name="description"
+      content="Product Manager and Web Designer with 4+ years of experience in AI-powered product development, SEO optimization, and international e-commerce."
+    />
+    <meta
+      name="keywords"
+      content="Product Manager, SEO Strategist, Web Designer, Shopify Developer, Frontend Developer India, AI Product Strategy, E-commerce Optimization"
+    />
+    <meta name="author" content="Monika Singh" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Monika Singh | Product Manager, SEO Strategist & Web Designer</title>
-  <meta name="description" content="Product Manager and Web Designer with 4+ years of experience in AI-powered product development, SEO optimization, and international e-commerce.">
-  <meta name="keywords" content="Product Manager, SEO Strategist, Web Designer, Shopify Developer, Frontend Developer India, AI Product Strategy, E-commerce Optimization">
-  <meta name="author" content="Monika Singh">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
+    <!-- =======================================================
   * Template Name: iLanding
   * Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
   * Updated: Nov 12 2024 with Bootstrap v5.3.3
@@ -36,175 +52,190 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-  <style>
-    .blog-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInUp 0.5s ease-in-out;
-    }
-    .blog-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-    }
-    .blog-card img {
-      width: 100%;
-      height: auto;
-    }
-    .blog-card .content {
-      padding: 20px;
-    }
-    .blog-card .meta {
-      font-size: 0.875rem;
-      color: #6c757d;
-    }
-    .blog-card h5 {
-      margin-top: 15px;
-      font-weight: 700;
-      font-size: 1.125rem;
-    }
-    .blog-card .btn {
-      background-image: linear-gradient(30deg, #6455A5 0%, #86C9D0 100%);
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      margin-top: 10px;
-      border-radius: 50px;
-      font-size: 0.875rem;
-    }
-    .pagination a, .pagination span {
-      margin: 0 6px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      cursor: pointer;
-    }
-    .pagination a.active, .pagination span.current {
-      background-image: linear-gradient(30deg, #6455A5 0%, #86C9D0 100%);
-      font-weight: bold;
-    }
-    .blog-page {
-      display: none;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-    .blog-page.active {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .sidebar {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-      margin-bottom: 30px;
-    }
-    .sidebar h5 {
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .sidebar .tags a {
-      display: inline-block;
-      background-color: #f1f1f1;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin: 4px 4px 0 0;
-      font-size: 0.875rem;
-    }
-    .sidebar .author img {
-      width: 100%;
-      border-radius: 12px;
-    }
-    .sidebar .author h5 {
-      margin-top: 15px;
-      font-size: 1rem;
-    }
-    .sidebar .author p {
-      font-size: 0.875rem;
-      color: #6c757d;
-    }
-    .sidebar .social a {
-      margin-right: 10px;
-      color: #333;
-      font-size: 1rem;
-    }
-    .latest-posts li {
-      margin-bottom: 15px;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    <style>
+      .blog-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 0.5s ease-in-out;
+      }
+      .blog-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+      }
+      .blog-card img {
+        width: 100%;
+        height: auto;
+      }
+      .blog-card .content {
+        padding: 20px;
+      }
+      .blog-card .meta {
+        font-size: 0.875rem;
+        color: #6c757d;
+      }
+      .blog-card h5 {
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 1.125rem;
+      }
+      .blog-card .btn {
+        background-image: linear-gradient(30deg, #6455a5 0%, #86c9d0 100%);
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        margin-top: 10px;
+        border-radius: 50px;
+        font-size: 0.875rem;
+      }
+      .pagination a,
+      .pagination span {
+        margin: 0 6px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .pagination a.active,
+      .pagination span.current {
+        background-image: linear-gradient(30deg, #6455a5 0%, #86c9d0 100%);
+        font-weight: bold;
+      }
+      .blog-page {
+        display: none;
+        animation: fadeIn 0.6s ease-in-out;
+      }
+      .blog-page.active {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .sidebar {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+      }
+      .sidebar h5 {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .sidebar .tags a {
+        display: inline-block;
+        background-color: #f1f1f1;
+        padding: 6px 12px;
+        border-radius: 20px;
+        margin: 4px 4px 0 0;
+        font-size: 0.875rem;
+      }
+      .sidebar .author img {
+        width: 100%;
+        border-radius: 12px;
+      }
+      .sidebar .author h5 {
+        margin-top: 15px;
+        font-size: 1rem;
+      }
+      .sidebar .author p {
+        font-size: 0.875rem;
+        color: #6c757d;
+      }
+      .sidebar .social a {
+        margin-right: 10px;
+        color: #333;
+        font-size: 1rem;
+      }
+      .latest-posts li {
+        margin-bottom: 15px;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
 
-    .latest-posts-box {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-}
+      .latest-posts-box {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+      }
 
-.latest-posts-box .section-title {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+      .latest-posts-box .section-title {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
 
-.post-item {
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-  border-bottom: 1px solid #e6e6e6;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-}
+      .post-item {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        border-bottom: 1px solid #e6e6e6;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+      }
 
-.post-item img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 6px;
-}
+      .post-item img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
 
-.post-item h6 {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
+      .post-item h6 {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
 
-.post-item small {
-  color: #777;
-  font-size: 13px;
-}
+      .post-item small {
+        color: #777;
+        font-size: 13px;
+      }
 
-.post-item.border-none {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-  </style>
-</head>
+      .post-item.border-none {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
 
-<body class="starter-page-page">
+  <body class="starter-page-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Monika Singh</h1>
+        </a>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Monika Singh</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Projects</a></li>
-          <li><a href="service-details.html">Services</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Projects</a></li>
+            <li><a href="service-details.html">Services</a></li>
+            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -221,126 +252,268 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li> -->
-          <li><a href="blog.html">Blogs</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" target="_blank" href="assets/img/portfolio/Monika_Singh_Web_Designer_CV.pdf">Download CV</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title light-background">
-      <div class="container">
-        <h1>Blogs</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Starter Page</li>
-          </ol>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-      </div>
-    </div><!-- End Page Title -->
 
-    <div class="container py-5">
-      <div class="row">
-        <!-- Blog Cards Area -->
-        <div class="col-lg-8">
-          <div id="page-1" class="row g-4 blog-page active">
-            <div class="col-md-6 col-lg-6">
-              <div class="blog-card">
-                <a href="WordPress vs Shopify.html"><img src="assets/img/high-angle-clothes-bed-fast-fashion-concept.jpg" alt="WordPress vs Shopify"></a>
-                <div class="content">
-                  <div class="meta"><i class="fas fa-pen"></i> Website</div>
-                  <h5><a href="WordPress vs Shopify.html">WordPress vs Shopify: Which One Should You Choose in 2025?</a></h5>
-                  <p>Choosing the right platform for your website or online store can make or break your business in 2025. As a web designer and product strategist, I’ve helped brands grow using both WordPress and Shopify, and I know — the choice depends on your goals, not just the platform.</p>
-                  <button class="btn"> <a href="WordPress vs Shopify.html" style="color: white;">Learn More</a> </button>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-6">
-              <div class="blog-card">
-                <a href="Web Design Process.html"><img src="assets/img/web-design-concepts-with-blurred-background.jpg" alt="Web Design Process"></a> 
-                <div class="content">
-                  <div class="meta"><i class="fas fa-pen"></i> Design</div>
-                  <h5><a href="Web Design Process.html">My Proven Web Design Process – From Wireframe to Live Website</a></h5>
-                  <p>Designing a website isn't just about making things look good — it's about solving problems, telling a story, and guiding users. Over the last few years, I’ve developed a <b>proven web design workflow</b>  that delivers not just beautiful interfaces but also measurable results.</p>
-                  <button class="btn"> <a href="Web Design Process.html" style="color: white;">Learn More</a> </button>
-                </div>   
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <div class="blog-card">
-                <a href="Use AI Tools.html"><img src="assets/img/futuristic-business-scene-with-ultra-modern-ambiance_23-2151003766.jpg" alt="AI workflow automation"></a>
-                <div class="content">
-                  <div class="meta"><i class="fas fa-pen"></i> AI workflow automation</div>
-                  <h5><a href="Use AI Tools.html">How I Use AI Tools Like ChatGPT & Notion AI to Automate My Workflow</a></h5>
-                  <p>AI is not the future — it’s the now. As a product strategist and web designer, staying productive while juggling multiple projects is key. That’s why I’ve integrated tools like <b>ChatGPT, Notion AI,</b> and others into my daily workflow to <b>automate repetitive tasks, speed up research,</b> and streamline content delivery.</p>
-                  <button class="btn"> <a href="Use AI Tools.html" style="color: white;">Learn More</a> </button>
-                </div>
-              </div>  
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <div class="blog-card">
-                <a href="Ultimate SEO Checklist.html"><img src="assets/img/magnifying-glass-with-seo-concepts_1134-81.jpg" alt="SEO Checklist"></a>
-                <div class="content">
-                  <div class="meta"><i class="fas fa-pen"></i> Marketing</div>
-                  <h5><a href="Ultimate SEO Checklist.html">The Ultimate SEO Checklist Before Launching Any Website (2025 Edition)</a></h5>
-                  <p>Launching a new website in 2025? Before you hit publish, make sure your site is optimized for visibility, speed, and success. As a web designer and strategist, I follow this exact SEO checklist with every site I launch — because missing even one step can cost rankings and traffic.</p>
-                  <button class="btn"> <a href="Ultimate SEO Checklist.html" style="color: white;">Learn More</a> </button>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div id="page-2" class="row g-4 blog-page">
-            <div class="col-md-6 col-lg-6">
-              <div class="blog-card">
-                <a href="Free Tools For Freelance Web Designer.html"><img src="assets/img/develop-coding-web-design-coding-web-template_53876-132245.jpg" alt="web design tools 2025"></a>
-                <div class="content">
-                  <div class="meta"><i class="fas fa-pen"></i> Design</div>
-                  <h5><a href="Free Tools For Freelance Web Designer.html">Top Free Tools Every Freelance Web Designer Should Be Using in 2025</a></h5>
-                  <p>Whether you're just starting your freelance journey or refining your tool stack in 2025, having the
-                    right (free) tools can save you time, money, and stress.</p>
-                  <button class="btn"> <a href="Free Tools For Freelance Web Designer.html" style="color: white;">Learn More</a> </button>
-                </div>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <div class="blog-card">
-                <a href="Sales by 40% Using SEO.html"><img src="assets/img/businesswoman-holding-cup-coffee-analyzing-financial-graphs-typing-marketing-strategy-while-working-company-project-startup-office-executive-manager-researching-business-solution_482257-34880.jpg" alt="E-Commerce SEO"></a>
-                <div class="content">
-                  <div class="meta"><i class="fas fa-pen"></i> Marketing</div>
-                  <h5><a href="Sales by 40% Using SEO.html">Case Study: How I Helped an eCommerce Brand Increase Sales by 40% Using SEO</a></h5>
-                  <p>In this case study, I’ll walk you through how I helped a Shopify-based eCommerce brand increase their sales by 40% — just by improving their SEO strategy.</p>
-                  <button class="btn"> <a href="Sales by 40% Using SEO.html" style="color: white;">Learn More</a> </button>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <!-- Pagination -->
-            <div class="mt-4 pagination text-center">
-            <a onclick="changePage('prev')" class="btn btn-outline-primary mx-1" style="border: 1px solid #6455A5;">←</a>
-            <a onclick="showPage(1)" id="pageBtn1" class="btn mx-1 active" style="border: 1px solid #6455A5;">1</a>
-            <a onclick="showPage(2)" id="pageBtn2" class="btn btn-outline-primary mx-1" style="border: 1px solid #6455A5;">2</a>
-            <a onclick="changePage('next')" class="btn btn-outline-primary mx-1" style="border: 1px solid #6455A5;">→</a>
-            </div>
+        <a
+          class="btn-getstarted"
+          target="_blank"
+          href="assets/img/portfolio/Monika_Singh_Web_Designer_CV.pdf"
+          >Download CV</a
+        >
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title light-background">
+        <div class="container">
+          <h1>Blogs</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Starter Page</li>
+            </ol>
+          </nav>
         </div>
-  
-        <!-- Sidebar (unchanged) -->
-        <div class="col-lg-4">
-          <div class="sidebar">
+      </div>
+      <!-- End Page Title -->
+
+      <div class="container py-5">
+        <div class="row">
+          <!-- Blog Cards Area -->
+          <div class="col-lg-8">
+            <div id="page-1" class="row g-4 blog-page active">
+              <div class="col-md-6 col-lg-6">
+                <div class="blog-card">
+                  <a href="WordPress vs Shopify.html"
+                    ><img
+                      src="assets/img/high-angle-clothes-bed-fast-fashion-concept.jpg"
+                      alt="WordPress vs Shopify"
+                  /></a>
+                  <div class="content">
+                    <div class="meta"><i class="fas fa-pen"></i> Website</div>
+                    <h5>
+                      <a href="WordPress vs Shopify.html"
+                        >WordPress vs Shopify: Which One Should You Choose in
+                        2025?</a
+                      >
+                    </h5>
+                    <p>
+                      Choosing the right platform for your website or online
+                      store can make or break your business in 2025. As a web
+                      designer and product strategist, I’ve helped brands grow
+                      using both WordPress and Shopify, and I know — the choice
+                      depends on your goals, not just the platform.
+                    </p>
+                    <button class="btn">
+                      <a href="WordPress vs Shopify.html" style="color: white"
+                        >Learn More</a
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-6">
+                <div class="blog-card">
+                  <a href="Web Design Process.html"
+                    ><img
+                      src="assets/img/web-design-concepts-with-blurred-background.jpg"
+                      alt="Web Design Process"
+                  /></a>
+                  <div class="content">
+                    <div class="meta"><i class="fas fa-pen"></i> Design</div>
+                    <h5>
+                      <a href="Web Design Process.html"
+                        >My Proven Web Design Process – From Wireframe to Live
+                        Website</a
+                      >
+                    </h5>
+                    <p>
+                      Designing a website isn't just about making things look
+                      good — it's about solving problems, telling a story, and
+                      guiding users. Over the last few years, I’ve developed a
+                      <b>proven web design workflow</b> that delivers not just
+                      beautiful interfaces but also measurable results.
+                    </p>
+                    <button class="btn">
+                      <a href="Web Design Process.html" style="color: white"
+                        >Learn More</a
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <div class="blog-card">
+                  <a href="Use AI Tools.html"
+                    ><img
+                      src="assets/img/futuristic-business-scene-with-ultra-modern-ambiance_23-2151003766.jpg"
+                      alt="AI workflow automation"
+                  /></a>
+                  <div class="content">
+                    <div class="meta">
+                      <i class="fas fa-pen"></i> AI workflow automation
+                    </div>
+                    <h5>
+                      <a href="Use AI Tools.html"
+                        >How I Use AI Tools Like ChatGPT & Notion AI to Automate
+                        My Workflow</a
+                      >
+                    </h5>
+                    <p>
+                      AI is not the future — it’s the now. As a product
+                      strategist and web designer, staying productive while
+                      juggling multiple projects is key. That’s why I’ve
+                      integrated tools like <b>ChatGPT, Notion AI,</b> and
+                      others into my daily workflow to
+                      <b>automate repetitive tasks, speed up research,</b> and
+                      streamline content delivery.
+                    </p>
+                    <button class="btn">
+                      <a href="Use AI Tools.html" style="color: white"
+                        >Learn More</a
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <div class="blog-card">
+                  <a href="Ultimate SEO Checklist.html"
+                    ><img
+                      src="assets/img/magnifying-glass-with-seo-concepts_1134-81.jpg"
+                      alt="SEO Checklist"
+                  /></a>
+                  <div class="content">
+                    <div class="meta"><i class="fas fa-pen"></i> Marketing</div>
+                    <h5>
+                      <a href="Ultimate SEO Checklist.html"
+                        >The Ultimate SEO Checklist Before Launching Any Website
+                        (2025 Edition)</a
+                      >
+                    </h5>
+                    <p>
+                      Launching a new website in 2025? Before you hit publish,
+                      make sure your site is optimized for visibility, speed,
+                      and success. As a web designer and strategist, I follow
+                      this exact SEO checklist with every site I launch —
+                      because missing even one step can cost rankings and
+                      traffic.
+                    </p>
+                    <button class="btn">
+                      <a href="Ultimate SEO Checklist.html" style="color: white"
+                        >Learn More</a
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="page-2" class="row g-4 blog-page">
+              <div class="col-md-6 col-lg-6">
+                <div class="blog-card">
+                  <a href="Free Tools For Freelance Web Designer.html"
+                    ><img
+                      src="assets/img/develop-coding-web-design-coding-web-template_53876-132245.jpg"
+                      alt="web design tools 2025"
+                  /></a>
+                  <div class="content">
+                    <div class="meta"><i class="fas fa-pen"></i> Design</div>
+                    <h5>
+                      <a href="Free Tools For Freelance Web Designer.html"
+                        >Top Free Tools Every Freelance Web Designer Should Be
+                        Using in 2025</a
+                      >
+                    </h5>
+                    <p>
+                      Whether you're just starting your freelance journey or
+                      refining your tool stack in 2025, having the right (free)
+                      tools can save you time, money, and stress.
+                    </p>
+                    <button class="btn">
+                      <a
+                        href="Free Tools For Freelance Web Designer.html"
+                        style="color: white"
+                        >Learn More</a
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <div class="blog-card">
+                  <a href="Sales by 40% Using SEO.html"
+                    ><img
+                      src="assets/img/businesswoman-holding-cup-coffee-analyzing-financial-graphs-typing-marketing-strategy-while-working-company-project-startup-office-executive-manager-researching-business-solution_482257-34880.jpg"
+                      alt="E-Commerce SEO"
+                  /></a>
+                  <div class="content">
+                    <div class="meta"><i class="fas fa-pen"></i> Marketing</div>
+                    <h5>
+                      <a href="Sales by 40% Using SEO.html"
+                        >Case Study: How I Helped an eCommerce Brand Increase
+                        Sales by 40% Using SEO</a
+                      >
+                    </h5>
+                    <p>
+                      In this case study, I’ll walk you through how I helped a
+                      Shopify-based eCommerce brand increase their sales by 40%
+                      — just by improving their SEO strategy.
+                    </p>
+                    <button class="btn">
+                      <a href="Sales by 40% Using SEO.html" style="color: white"
+                        >Learn More</a
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-4 pagination text-center">
+              <a
+                onclick="changePage('prev')"
+                class="btn btn-outline-primary mx-1"
+                style="border: 1px solid #6455a5"
+                >←</a
+              >
+              <a
+                onclick="showPage(1)"
+                id="pageBtn1"
+                class="btn mx-1 active"
+                style="border: 1px solid #6455a5"
+                >1</a
+              >
+              <a
+                onclick="showPage(2)"
+                id="pageBtn2"
+                class="btn btn-outline-primary mx-1"
+                style="border: 1px solid #6455a5"
+                >2</a
+              >
+              <a
+                onclick="changePage('next')"
+                class="btn btn-outline-primary mx-1"
+                style="border: 1px solid #6455a5"
+                >→</a
+              >
+            </div>
+          </div>
+
+          <!-- Sidebar (unchanged) -->
+          <div class="col-lg-4">
+            <!-- <div class="sidebar">
             <input type="text" class="form-control mb-2" placeholder="search">
             <button class="btn w-100" style="background-color:#6455a5; color:#fff;">SEARCH</button>
-          </div>
-          <!-- <div class="sidebar text-center">
+          </div> -->
+            <!-- <div class="sidebar text-center">
             <div class="author">
               <img src="https://via.placeholder.com/400x300" alt="Author">
               <h5>Arther Conal</h5>
@@ -355,155 +528,198 @@
               </div>
             </div>
           </div> -->
-          <div class="sidebar">
-            <h5>Latest Posts</h5>
-          
-            <div class="post-item">
-              <a href="Sales by 40% Using SEO.html"><img src="assets/img/businesswoman-holding-cup-coffee-analyzing-financial-graphs-typing-marketing-strategy-while-working-company-project-startup-office-executive-manager-researching-business-solution_482257-34880.jpg" alt="eCommerce Brand Sales"></a>
-              <div>
-                <a href="Sales by 40% Using SEO.html"><h6>Case Study: How I Helped an eCommerce Brand Increase Sales by 40% Using SEO</h6></a>
-                <small>📆 02 April 2025</small>
+            <div class="sidebar">
+              <h5>Latest Posts</h5>
+
+              <div class="post-item">
+                <a href="Sales by 40% Using SEO.html"
+                  ><img
+                    src="assets/img/businesswoman-holding-cup-coffee-analyzing-financial-graphs-typing-marketing-strategy-while-working-company-project-startup-office-executive-manager-researching-business-solution_482257-34880.jpg"
+                    alt="eCommerce Brand Sales"
+                /></a>
+                <div>
+                  <a href="Sales by 40% Using SEO.html"
+                    ><h6>
+                      Case Study: How I Helped an eCommerce Brand Increase Sales
+                      by 40% Using SEO
+                    </h6></a
+                  >
+                  <small>📆 02 April 2025</small>
+                </div>
+              </div>
+
+              <div class="post-item">
+                <a href="Free Tools For Freelance Web Designer.html"
+                  ><img
+                    src="assets/img/develop-coding-web-design-coding-web-template_53876-132245.jpg"
+                    alt="Web Designer"
+                /></a>
+                <div>
+                  <a href="Free Tools For Freelance Web Designer.html"
+                    ><h6>
+                      Top Free Tools Every Freelance Web Designer Should Be
+                      Using in 2025
+                    </h6></a
+                  >
+                  <small>📆 12 March 2025</small>
+                </div>
+              </div>
+
+              <div class="post-item border-none">
+                <a href="Ultimate SEO Checklist.html"
+                  ><img
+                    src="assets/img/magnifying-glass-with-seo-concepts_1134-81.jpg"
+                    alt="SEO Checklist"
+                /></a>
+                <div>
+                  <a href="Ultimate SEO Checklist.html"
+                    ><h6>
+                      The Ultimate SEO Checklist Before Launching Any Website
+                      (2025 Edition)
+                    </h6></a
+                  >
+                  <small>📆 22 February 2025</small>
+                </div>
               </div>
             </div>
-          
-            <div class="post-item">
-              <a href="Free Tools For Freelance Web Designer.html"><img src="assets/img/develop-coding-web-design-coding-web-template_53876-132245.jpg" alt="Web Designer"></a>
-              <div>
-                <a href="Free Tools For Freelance Web Designer.html"><h6>Top Free Tools Every Freelance Web Designer Should Be Using in 2025</h6></a>
-                <small>📆 12 March 2025</small>
+
+            <div class="sidebar">
+              <h5>Tags</h5>
+              <div class="tags">
+                <a href="#">Web</a>
+                <a href="#">Agency</a>
+                <a href="#">Company</a>
+                <a href="#">Creative</a>
+                <a href="#">HTML</a>
+                <a href="#">Marketing</a>
+                <a href="#">Social Media</a>
+                <a href="#">Branding</a>
               </div>
-            </div>
-          
-            <div class="post-item border-none">
-              <a href="Ultimate SEO Checklist.html"><img src="assets/img/magnifying-glass-with-seo-concepts_1134-81.jpg" alt="SEO Checklist"></a>
-              <div>
-                <a href="Ultimate SEO Checklist.html"><h6>The Ultimate SEO Checklist Before Launching Any Website (2025 Edition)</h6></a>
-                <small>📆 22 February 2025</small>
-              </div>
-            </div>
-          </div>
-          
-          <div class="sidebar">
-            <h5>Tags</h5>
-            <div class="tags">
-              <a href="#">Web</a>
-              <a href="#">Agency</a>
-              <a href="#">Company</a>
-              <a href="#">Creative</a>
-              <a href="#">HTML</a>
-              <a href="#">Marketing</a>
-              <a href="#">Social Media</a>
-              <a href="#">Branding</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Monika Singh</span>
-          </a>
-          <div class="footer-contact">
-            <p>Senior Web Designer & Product Manager with expertise in creating elegant web designs and implementing effective SEO & marketing strategies.</p>
-            
-          </div>
-          <div class="social-links d-flex mt-4">
-            <!-- <a href=""><i class="bi bi-n"></i></a>
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Monika Singh</span>
+            </a>
+            <div class="footer-contact">
+              <p>
+                Senior Web Designer & Product Manager with expertise in creating
+                elegant web designs and implementing effective SEO & marketing
+                strategies.
+              </p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <!-- <a href=""><i class="bi bi-n"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a> -->
-            <a href="inkedin.com/in/monika18-singh/"><i class="bi bi-linkedin"></i></a>
+              <a href="inkedin.com/in/monika18-singh/"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#hero" class="active">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#features">Projects</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col footer-links">
+            <h4>My Services</h4>
+            <ul>
+              <li><a>Web Design</a></li>
+              <li><a>SEO Optimization</a></li>
+              <li><a>Product Management</a></li>
+              <li><a>Email Marketing</a></li>
+              <li><a>UI/UX Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-about">
+            <h4>Address</h4>
+            <div class="footer-contact">
+              <p>F-364 Shiv Durga Vihar, Lakkarpur Faridabad</p>
+              <p>India, 121009</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+91 9654772118</span>
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <a href="mailto:monika.singh.18oct@gmail.com"
+                  ><span>monika.singh.18oct@gmail.com</span></a
+                >
+              </p>
+              <!-- <p><strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/monika-singh-25893b200/"><span>linkedin.com/in/monika18-singh/</span></a> </p> -->
+            </div>
           </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Projects</a></li>
-          <li><a href="blog.html">Blogs</a></li>
-          <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a>Web Design</a></li>
-            <li><a>SEO Optimization</a></li>
-            <li><a>Product Management</a></li>
-            <li><a>Email Marketing</a></li>
-            <li><a>UI/UX Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-6 footer-about">
-          <h4>Address</h4>
-          <div class="footer-contact">
-            <p>F-364 Shiv Durga Vihar, Lakkarpur Faridabad</p>
-            <p>India, 121009</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+91 9654772118</span></p>
-            <p><strong>Email:</strong> <a href="mailto:monika.singh.18oct@gmail.com"><span>monika.singh.18oct@gmail.com</span></a> </p>
-            <!-- <p><strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/monika-singh-25893b200/"><span>linkedin.com/in/monika18-singh/</span></a> </p> -->
-          </div>
-        </div>
-        
-
       </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">2025 Monika Singh.</strong> <span>All Rights Reserved</span></p>
-    </div>
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">2025 Monika Singh.</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
 
-  </footer>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <script>
+      let currentPage = 1;
 
-  <script>
-    let currentPage = 1;
+      function showPage(page) {
+        document
+          .querySelectorAll('.blog-page')
+          .forEach((p) => p.classList.remove('active'));
+        document.getElementById('page-' + page).classList.add('active');
 
-    function showPage(page) {
-      document.querySelectorAll('.blog-page').forEach(p => p.classList.remove('active'));
-      document.getElementById('page-' + page).classList.add('active');
+        document.getElementById('pageBtn1').classList.remove('active');
+        document.getElementById('pageBtn2').classList.remove('active');
+        document.getElementById('pageBtn' + page).classList.add('active');
 
-      document.getElementById('pageBtn1').classList.remove('active');
-      document.getElementById('pageBtn2').classList.remove('active');
-      document.getElementById('pageBtn' + page).classList.add('active');
-
-      currentPage = page;
-    }
-
-    function changePage(direction) {
-      if (direction === 'next' && currentPage < 2) {
-        showPage(currentPage + 1);
-      } else if (direction === 'prev' && currentPage > 1) {
-        showPage(currentPage - 1);
+        currentPage = page;
       }
-    }
 
-    showPage(1);
-  </script>
+      function changePage(direction) {
+        if (direction === 'next' && currentPage < 2) {
+          showPage(currentPage + 1);
+        } else if (direction === 'prev' && currentPage > 1) {
+          showPage(currentPage - 1);
+        }
+      }
 
-</body>
-
+      showPage(1);
+    </script>
+  </body>
 </html>
