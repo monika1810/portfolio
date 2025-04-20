@@ -144,8 +144,8 @@
                     ><span>Product Strategy & Research</span></a
                   >
                   <a
-                    href="#Marketplace-Optimization"
-                    id="link-Marketplace-Optimization"
+                    href="#SEO-Optimization"
+                    id="link-SEO-Optimization"
                     onclick="showSection('Marketplace-Optimization', this)"
                     ><i class="bi bi-arrow-right-circle"></i
                     ><span>SEO & Content Optimization</span></a
@@ -584,5 +584,51 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+      function showSection(sectionId, linkElement) {
+        // Hide all sections
+        document.querySelectorAll('.section-content').forEach((section) => {
+          section.classList.add('d-none');
+        });
+    
+        // Show the selected section
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+          targetSection.classList.remove('d-none');
+        }
+    
+        // Remove active class from all links
+        document.querySelectorAll('.services-list a').forEach((link) => {
+          link.classList.remove('active');
+        });
+    
+        // Add active class to the clicked link
+        if (linkElement) {
+          linkElement.classList.add('active');
+        }
+      }
+    
+      // Show the default or hash-based section on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        const hash = window.location.hash.substring(1); // Get the hash without the #
+        if (hash) {
+          const linkElement = document.getElementById(`link-${hash}`);
+          showSection(hash, linkElement);
+        } else {
+          // Show the default section if no hash is present
+          showSection(
+            'Web-Design-Development',
+            document.getElementById('link-Web-Design-Development')
+          );
+        }
+      });
+    
+      // Update the section when the hash changes
+      window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.substring(1); // Get the hash without the #
+        const linkElement = document.getElementById(`link-${hash}`);
+        showSection(hash, linkElement);
+      });
+    </script>
   </body>
 </html>
