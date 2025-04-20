@@ -247,26 +247,26 @@ var swiper = new Swiper('.blog-slider', {
 
 
 // form
-document.querySelector('.php-email-form').addEventListener('submit', function (e) {
-  e.preventDefault(); // Prevent default form submission
-  const form = e.target;
+// document.querySelector('.php-email-form').addEventListener('submit', function (e) {
+//   e.preventDefault(); // Prevent default form submission
+//   const form = e.target;
 
-  fetch(form.action, {
-    method: form.method,
-    body: new FormData(form),
-    headers: {
-      Accept: 'application/json',
-    },
-  })
-    .then((response) => {
-      if (response.ok) {
-        form.querySelector('.sent-message').style.display = 'block';
-        form.reset();
-      } else {
-        form.querySelector('.error-message').style.display = 'block';
-      }
-    })
-    .catch(() => {
-      form.querySelector('.error-message').style.display = 'block';
-    });
-});
+//   fetch(form.action, {
+//     method: form.method,
+//     body: new FormData(form),
+//     headers: {
+//       Accept: 'application/json',
+//     },
+//   })
+//     .then((response) => {
+//       if (response.ok) {
+//         form.querySelector('.sent-message').style.display = 'block';
+//         form.reset();
+//       } else {
+//         form.querySelector('.error-message').style.display = 'block';
+//       }
+//     })
+//     .catch(() => {
+//       form.querySelector('.error-message').style.display = 'block';
+//     });
+// });
