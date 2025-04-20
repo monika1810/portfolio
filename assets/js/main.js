@@ -237,9 +237,7 @@ var swiper = new Swiper('.blog-slider', {
   spaceBetween: 30,
   effect: 'fade',
   loop: true,
-  mousewheel: {
-    invert: false,
-  },
+  mousewheel: window.innerWidth > 1024 ? { invert: false } : false, // Enable mousewheel only on desktop
   // autoHeight: true,
   pagination: {
     el: '.blog-slider__pagination',
