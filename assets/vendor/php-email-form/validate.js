@@ -35,8 +35,15 @@
         .then((response) => {
           thisForm.querySelector('.loading').classList.remove('d-block');
           if (response.ok) {
-            thisForm.querySelector('.sent-message').classList.add('d-block');
-            thisForm.reset();
+            // Handle Formspree's JSON response
+            return response.json().then((data) => {
+              if (data.ok) {
+                thisForm.querySelector('.sent-message').classList.add('d-block');
+                thisForm.reset();
+              } else {
+                throw new Error('Form submission failed!');
+              }
+            });
           } else {
             return response.json().then((data) => {
               throw new Error(data.error || 'Form submission failed!');
