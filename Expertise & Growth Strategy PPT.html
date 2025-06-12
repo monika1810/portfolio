@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monika Singh - SEO Growth Hacks & AI Innovation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            --text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            --card-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            --gold: #ffd700;
+            --coral: #ff6b6b;
+            --teal: #4ecdc4;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-gradient);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Enhanced Floating particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) rotate(0deg); 
+                opacity: 0.7; 
+            }
+            25% { 
+                transform: translateY(-30px) translateX(20px) rotate(90deg); 
+                opacity: 1; 
+            }
+            50% { 
+                transform: translateY(-50px) translateX(-10px) rotate(180deg); 
+                opacity: 0.8; 
+            }
+            75% { 
+                transform: translateY(-20px) translateX(-30px) rotate(270deg); 
+                opacity: 0.9; 
+            }
+        }
+
+        .presentation-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .slide {
+            min-height: 100vh;
+            display: none;
+            padding: 40px 20px;
+            animation: slideIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Enhanced Typography with better contrast */
+        .slide h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--gold), var(--coral), var(--teal));
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textGradient 3s ease infinite;
+            position: relative;
+        }
+
+        .slide h1::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--gold), var(--coral), var(--teal));
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: blur(2px);
+            z-index: -1;
+            animation: textGradient 3s ease infinite reverse;
+        }
+
+        @keyframes textGradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .slide h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 40px;
+            color: var(--gold);
+            text-align: center;
+            font-weight: 800;
+            text-shadow: var(--text-shadow);
+            position: relative;
+        }
+
+        .slide h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--gold), var(--coral));
+            border-radius: 2px;
+            animation: pulse 2s infinite;
+        }
+
+        .slide h3 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin-bottom: 20px;
+            color: #87ceeb;
+            font-weight: 700;
+            text-shadow: var(--text-shadow);
+        }
+
+        /* Enhanced Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 30px;
+            margin: 50px 0;
+            padding: 0 10px;
+        }
+
+        /* Enhanced Glass Cards */
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 25px;
+            padding: 35px;
+            border: 2px solid var(--glass-border);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 215, 0, 0.6);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Enhanced Metrics */
+        .metric {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--gold), var(--coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+            text-shadow: none;
+        }
+
+        .metric-label {
+            text-align: center;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            opacity: 0.95;
+            font-weight: 600;
+            text-shadow: var(--text-shadow);
+            color: #ffffff;
+        }
+
+        /* Enhanced Growth Hack Cards */
+        .growth-hack {
+            margin-bottom: 40px;
+            padding: 40px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border-left: 6px solid var(--gold);
+            border: 2px solid var(--glass-border);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .growth-hack::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s;
+        }
+
+        .growth-hack:hover::before {
+            left: 100%;
+        }
+
+        .growth-hack:hover {
+            transform: translateX(15px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .growth-hack h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+        }
+
+        .growth-hack p {
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            color: #ffffff;
+        }
+
+        .growth-hack strong {
+            color: var(--coral);
+            font-weight: 700;
+        }
+
+        /* Enhanced AI Tools */
+        .ai-tool {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--coral), var(--teal), var(--gold));
+            background-size: 300% 300%;
+            animation: gradientShift 4s ease infinite;
+            padding: 12px 24px;
+            border-radius: 30px;
+            margin: 8px;
+            font-weight: 700;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            transform: scale(1);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .ai-tool::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .ai-tool:hover::before {
+            left: 100%;
+        }
+
+        .ai-tool:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Enhanced Navigation */
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 2px solid var(--glass-border);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            text-shadow: var(--text-shadow);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .nav-btn:hover::before {
+            left: 100%;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--gold);
+        }
+
+        /* Enhanced Slide Indicators */
+        .slide-indicator {
+            position: fixed;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .indicator-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .indicator-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            background: var(--gold);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .indicator-dot.active::after {
+            width: 100%;
+            height: 100%;
+        }
+
+        .indicator-dot:hover {
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(1.3);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Enhanced Intro Section */
+        .intro-section {
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .profile-image {
+            width: clamp(150px, 20vw, 220px);
+            height: clamp(150px, 20vw, 220px);
+            border-radius: 50%;
+            margin: 0 auto 40px;
+            background: linear-gradient(45deg, var(--gold), var(--coral), var(--teal));
+            background-size: 300% 300%;
+            animation: gradientShift 4s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            color: white;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            text-shadow: var(--text-shadow);
+        }
+
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Enhanced Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .tech-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 2px solid var(--glass-border);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tech-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .tech-item:hover::before {
+            left: 100%;
+        }
+
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--gold);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .contact-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 20px 30px;
+            border-radius: 20px;
+            border: 2px solid var(--glass-border);
+            transition: all 0.3s ease;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 600;
+            color: white;
+            text-shadow: var(--text-shadow);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border-color: var(--gold);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(45deg, var(--gold), var(--coral), var(--teal));
+            z-index: 9999;
+            transition: width 0.3s ease;
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Enhanced Animations */
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(50px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05) translateY(-10px);
+            }
+            70% {
+                transform: scale(0.9) translateY(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .bounce-in {
+            animation: bounceIn 1s ease-out forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
+            }
+            
+            .growth-hack {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 30px 15px;
+                min-height: calc(100vh - 120px);
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin: 30px 0;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                bottom: 20px;
+            }
+            
+            .nav-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .slide-indicator {
+                display: none;
+            }
+            
+            .growth-hack {
+                padding: 25px;
+                margin-bottom: 30px;
+            }
+            
+            .card {
+                padding: 25px;
+            }
+            
+            .intro-section {
+                padding: 50px 0;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-item {
+                text-align: center;
+                min-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                padding: 20px 10px;
+            }
+            
+            .growth-hack {
+                padding: 20px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .tech-stack, .contact-info {
+                gap: 10px;
+            }
+            
+            .ai-tool, .tech-item {
+                padding: 10px 16px;
+                margin: 5px;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .card, .growth-hack, .nav-btn, .tech-item, .contact-item {
+                border-width: 3px;
+                background: rgba(0, 0, 0, 0.8);
+            }
+            
+            .slide h1, .slide h2, .slide h3 {
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="presentation-container">
+        <!-- Slide 1: Professional Introduction -->
+        <div class="slide active">
+            <div class="intro-section">
+                <div class="profile-image bounce-in"><img src="https://monika-singh.pages.dev/assets/img/monike-profile.webp" alt="" width="250px" height="250px"></div>
+                <h1 class="bounce-in" data-text="Monika Singh">Monika Singh</h1>
+                <h2>SEO Growth Strategist & Web Designer</h2>
+                <div>
+                    <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); margin: 30px 0; opacity: 0.95; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                        🎯 SEO & Marketing Strategist | 🚀 Senior Web Designer | 👨🏻‍💻 Product Manager | 🤖 AI Workflow Automation
+                    </p>
+                    <p style="font-size: clamp(1rem, 2.5vw, 1.3rem); opacity: 0.9; font-weight: 500; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); max-width: 1200px; margin: 0 auto;">
+                        4+ years of experience driving global digital transformation through strategic SEO, AI automation, and data-driven product management. Specialized in multilingual e-commerce growth, technical optimization, and AI-integrated workflow solutions that deliver measurable results across international markets.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Proven Results & Achievements -->
+        <div class="slide">
+            <h2>🏆 Proven Growth Results</h2>
+            <div class="content-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+                <div class="card bounce-in">
+                    <div class="metric">20%</div>
+                    <div class="metric-label">📈 Sales Growth Boost</div>
+                </div>
+                <div class="card bounce-in">
+                    <div class="metric">40%</div>
+                    <div class="metric-label">🔍 Organic Traffic Increase</div>
+                </div>
+                <div class="card bounce-in">
+                    <div class="metric">25%</div>
+                    <div class="metric-label">💰 Revenue Growth via Dynamic Pricing</div>
+                </div>
+                <div class="card bounce-in">
+                    <div class="metric">5</div>
+                    <div class="metric-label">🌍 European Markets Launched</div>
+                </div>
+                <div class="card bounce-in">
+                    <div class="metric">4+</div>
+                    <div class="metric-label">⭐ Years of Experience</div>
+                </div>
+                <div class="card bounce-in">
+                    <div class="metric">15+</div>
+                    <div class="metric-label">😊 Satisfied Global Clients</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: SEO Growth Hacks Implementation -->
+        <div class="slide">
+            <h2>🚀 Advanced SEO Growth Hacks</h2>
+            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 50% 50%; gap: 20px;">
+                <div class="growth-hack">
+                    <h3>🌐 Multilingual E-commerce SEO Domination</h3>
+                    <p><strong>🎯 Challenge:</strong> Scale organic visibility across 5 European markets (Germany, France, Spain, Poland, Austria) simultaneously</p>
+                    <p><strong>🚀 Strategy:</strong> Implemented AI-powered multilingual SEO with native keyword research, cultural content adaptation, and region-specific technical optimization</p>
+                    <p><strong>💥 Impact:</strong> 20% sales increase + 40% organic traffic growth + seamless market penetration across all target regions</p>
+                </div>
+                
+                <div class="growth-hack">
+                    <h3>🤖 AI-Enhanced Dynamic Pricing SEO</h3>
+                    <p><strong>🎯 Challenge:</strong> Optimize product visibility while maintaining competitive pricing across multiple e-commerce platforms</p>
+                    <p><strong>🚀 Strategy:</strong> Built automated pricing algorithms integrated with SEO-optimized product listings using AI tools and real-time competitor analysis</p>
+                    <p><strong>💥 Impact:</strong> 25% revenue boost through intelligent pricing + improved search rankings + enhanced conversion rates</p>
+                </div>
+                
+                <div class="growth-hack">
+                    <h3>🎯 Technical SEO Automation at Scale</h3>
+                    <p><strong>🎯 Challenge:</strong> Manually auditing and fixing technical SEO issues across large-scale e-commerce websites was time-intensive</p>
+                    <p><strong>🚀 Strategy:</strong> Developed automated technical SEO monitoring using Python scripts, AI-powered site audits, and real-time performance tracking</p>
+                    <p><strong>💥 Impact:</strong> 60% reduction in technical SEO resolution time + proactive issue detection + consistent site performance optimization</p>
+                </div>
+                
+                <div class="growth-hack">
+                    <h3>📊 AI-Driven Content Gap Analysis</h3>
+                    <p><strong>🎯 Challenge:</strong> Identify high-value content opportunities across competitive e-commerce niches</p>
+                    <p><strong>🚀 Strategy:</strong> Leveraged AI tools for competitor content analysis, semantic keyword clustering, and automated content briefs generation</p>
+                    <p><strong>💥 Impact:</strong> 300% increase in content production efficiency + 45% improvement in content ranking performance + strategic content roadmaps</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: AI Tools & Tech Stack -->
+        <div class="slide">
+            <h2>🤖 AI-Powered Arsenal</h2>
+            <h3 style="text-align: center; margin-bottom: 30px;">Advanced AI Tools Mastery</h3>
+            <div style="text-align: center; margin: 40px 0;">
+                <div class="ai-tool">ChatGPT</div>
+                <div class="ai-tool">Claude AI</div>
+                <div class="ai-tool">Perplexity</div>
+                <div class="ai-tool">Gemini</div>
+                <div class="ai-tool">Cursor AI</div>
+                <div class="ai-tool">GitHub Copilot</div>
+                <div class="ai-tool">Midjourney</div>
+                <div class="ai-tool">DALL-E</div>
+                <div class="ai-tool">Runway ML</div>
+                <div class="ai-tool">Jasper AI</div>
+                <div class="ai-tool">Copy.ai</div>
+                <div class="ai-tool">Writesonic</div>
+                <div class="ai-tool">Notion AI</div>
+                <div class="ai-tool">Zapier AI</div>
+                <div class="ai-tool">Make.com</div>
+            </div>
+            
+            <h3 style="text-align: center; margin: 40px 0 30px;">Technical Excellence Stack</h3>
+            <div class="tech-stack">
+                <div class="tech-item">Advanced SEO</div>
+                <div class="tech-item">Python Automation</div>
+                <div class="tech-item">Google Analytics 4</div>
+                <div class="tech-item">Google Search Console</div>
+                <div class="tech-item">Screaming Frog</div>
+                <div class="tech-item">Ahrefs</div>
+                <div class="tech-item">SEMrush</div>
+                <div class="tech-item">Product Management</div>
+                <div class="tech-item">E-commerce Strategy</div>
+                <div class="tech-item">International SEO</div>
+                <div class="tech-item">Technical SEO</div>
+                <div class="tech-item">Content Strategy</div>
+                <div class="tech-item">Data Analysis</div>
+                <div class="tech-item">A/B Testing</div>
+                <div class="tech-item">CRO</div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Professional Experience & Expertise -->
+        <div class="slide">
+            <h2>💼 Professional Journey</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>🏢 Product Manager & SEO Lead</h3>
+                    <p><strong>🎯 E-commerce Excellence:</strong> Led product strategy and SEO optimization for global e-commerce platforms</p>
+                    <p><strong>🌍 Market Expansion:</strong> Successfully launched and scaled operations across 5 European markets</p>
+                    <p><strong>📈 Growth Results:</strong> Delivered consistent 20%+ growth through data-driven strategies</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🤖 AI Integration Specialist</h3>
+                    <p><strong>⚡ Automation Expert:</strong> Implemented AI-powered workflows reducing manual tasks by 70%+</p>
+                    <p><strong>🔧 Custom Solutions:</strong> Built proprietary tools for SEO automation and performance tracking</p>
+                    <p><strong>📊 Data-Driven:</strong> Created advanced analytics dashboards for real-time decision making</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🎯 Strategic Consultant</h3>
+                    <p><strong>💡 Innovation Focus:</strong> Pioneered cutting-edge SEO strategies combining AI and traditional methods</p>
+                    <p><strong>🏆 Client Success:</strong> Helped 15+ global clients achieve breakthrough growth results</p>
+                    <p><strong>🌟 Industry Recognition:</strong> Featured expert in AI-powered digital marketing strategies</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Services & Solutions -->
+        <div class="slide">
+            <h2>🎯 What I Have Done</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>🚀 SEO Growth Acceleration</h3>
+                    <p>• Comprehensive SEO audits & strategy development</p>
+                    <p>• Technical SEO optimization & automation</p>
+                    <p>• International SEO & multilingual expansion</p>
+                    <p>• AI-powered content optimization</p>
+                    <p>• Advanced keyword research & competitive analysis</p>
+                </div>
+                
+                <div class="card">
+                    <h3>💼 Product Management</h3>
+                    <p>• Product strategy & roadmap development</p>
+                    <p>• E-commerce platform optimization</p>
+                    <p>• User experience & conversion optimization</p>
+                    <p>• Market research & competitive intelligence</p>
+                    <p>• Data analytics & performance tracking</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🤖 AI Automation Solutions</h3>
+                    <p>• Custom AI workflow development</p>
+                    <p>• Marketing automation & optimization</p>
+                    <p>• AI-powered content creation strategies</p>
+                    <p>• Process automation & efficiency improvement</p>
+                    <p>• AI tool integration & training</p>
+                </div>
+                
+                <div class="card">
+                    <h3>📊 Growth Strategy Consulting</h3>
+                    <p>• Comprehensive growth strategy development</p>
+                    <p>• Market expansion & internationalization</p>
+                    <p>• Revenue optimization & pricing strategies</p>
+                    <p>• Digital transformation consulting</p>
+                    <p>• Team training & capability building</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Contact & Connect -->
+        <div class="slide">
+            <h2>🌟 Let's Create Digital Magic Together</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 23px; margin: 30px 0; opacity: 0.95; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                    Ready to 10X your digital growth? Let's revolutionize your SEO strategy!
+                </p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 Email: <a href="mailto: monika.singh.18oct@gmail.com" style="color: #ffffff;">monika.singh.18oct@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    💼 LinkedIn: <a href="https://www.linkedin.com/in/monika18-singh/" style="color: #ffffff;">https://www.linkedin.com/in/monika18-singh/</a>
+                </div>
+                <div class="contact-item">
+                    🌐 Portfolio: <a href="https://monika-singh.pages.dev/" style="color: #ffffff;">Monika Singh</a>
+                </div>
+                <div class="contact-item">
+                    📱 WhatsApp: <a href="tel: +91 96547 72118" style="color: #ffffff;">+91 96547 72118</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="font-size: clamp(1.1rem, 2.5vw, 1.3rem); font-weight: 600; color: var(--gold); text-shadow: var(--text-shadow);">
+                    🚀 "Turning SEO challenges into growth opportunities, one algorithm at a time!"
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn" onclick="prevSlide()">⬅️ Previous</button>
+        <button class="nav-btn" onclick="nextSlide()">Next ➡️</button>
+    </div>
+
+    <!-- Slide Indicator -->
+    <div class="slide-indicator">
+        <div class="indicator-dot active" onclick="goToSlide(0)"></div>
+        <div class="indicator-dot" onclick="goToSlide(1)"></div>
+        <div class="indicator-dot" onclick="goToSlide(2)"></div>
+        <div class="indicator-dot" onclick="goToSlide(3)"></div>
+        <div class="indicator-dot" onclick="goToSlide(4)"></div>
+        <div class="indicator-dot" onclick="goToSlide(5)"></div>
+        <div class="indicator-dot" onclick="goToSlide(6)"></div>
+    </div>
+
+    <script>
+        // Presentation functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator-dot');
+        const progressBar = document.getElementById('progressBar');
+        const totalSlides = slides.length;
+
+        // Initialize particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Show specific slide
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active from all indicators
+            indicators.forEach(indicator => {
+                indicator.classList.remove('active');
+            });
+            
+            // Show current slide
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            
+            // Update progress bar
+            const progress = ((index + 1) / totalSlides) * 100;
+            progressBar.style.width = progress + '%';
+            
+            // Add bounce effect to cards in current slide
+            const cards = slides[index].querySelectorAll('.card, .growth-hack');
+            cards.forEach((card, i) => {
+                setTimeout(() => {
+                    card.classList.add('bounce-in');
+                }, i * 200);
+            });
+        }
+
+        // Navigation functions
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slides (optional)
+        function startAutoSlide() {
+            setInterval(() => {
+                nextSlide();
+            }, 15000); // 15 seconds per slide
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key >= '1' && e.key <= '7') {
+                goToSlide(parseInt(e.key) - 1);
+            }
+        });
+
+        // Touch navigation for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeReserve = 50;
+            if (touchEndX < touchStartX - swipeReserve) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + swipeReserve) {
+                prevSlide();
+            }
+        }
+
+        // Mouse wheel navigation
+        let isScrolling = false;
+        // document.addEventListener('wheel', (e) => {
+        //     if (isScrolling) return;
+        //     isScrolling = true;
+            
+        //     if (e.deltaY > 0) {
+        //         nextSlide();
+        //     } else {
+        //         prevSlide();
+        //     }
+            
+        //     setTimeout(() => {
+        //         isScrolling = false;
+        //     }, 1000);
+        // });
+
+        // Loading animation
+        window.addEventListener('load', () => {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            showSlide(0);
+            // Uncomment to enable auto-advance
+            // startAutoSlide();
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                btn.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    btn.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Add parallax effect to background
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.body.style.backgroundPosition = `${x * 10}px ${y * 10}px`;
+        });
+
+        // Performance optimization
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('bounce-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .growth-hack, .ai-tool, .tech-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add fullscreen toggle
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Add keyboard shortcut for fullscreen (F key)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'f' || e.key === 'F') {
+                toggleFullscreen();
+            }
+        });
+
+        // Add escape key to exit fullscreen
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && document.fullscreenElement) {
+                document.exitFullscreen();
+            }
+        });
+
+        // Add presentation timer
+        let presentationStartTime = Date.now();
+        let timerInterval;
+
+        function updateTimer() {
+            const elapsed = Date.now() - presentationStartTime;
+            const minutes = Math.floor(elapsed / 60000);
+            const seconds = Math.floor((elapsed % 60000) / 1000);
+            console.log(`Presentation time: ${minutes}:${seconds.toString().padStart(2, '0')}`);
+        }
+
+        // Start timer
+        timerInterval = setInterval(updateTimer, 1000);
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            clearInterval(timerInterval);
+        });
+    </script>
+</body>
+</html>
